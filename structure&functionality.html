@@ -11,15 +11,20 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
       $(function () {
-        $("#squareShape").draggable();
+        $("#squareShape,#trapezoidShape").draggable();
       });
     </script>
     <h1>Arrange the puzzle</h1>
     <div class="left-block"></div>
 
-    <div class="middle-block"><div class="squareHollow"></div></div>
+    <div class="middle-block">
+      <div class="squareHollow"></div>
+      <div class="trapezoidHollow"></div>
+    </div>
 
     <div class="right-block"></div>
     <div id="squareShape" class="ui-widget-content" draggable="true"></div>
+
+    <div id="trapezoidShape" class="ui-widget-content" draggable="true"></div>
   </body>
 </html>
