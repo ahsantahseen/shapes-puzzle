@@ -1,0 +1,87 @@
+body {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+@media (min-width: 1000px) {
+  .left-block {
+    position: fixed;
+    margin-top: 100px;
+    margin-left: -600px;
+    height: 450px;
+    background-color: red;
+    width: 10px;
+  }
+  .middle-block {
+    position: fixed;
+    margin-top: 500px;
+
+    margin-left: 10px;
+    height: 50px;
+    width: 600px;
+    background-color: red;
+  }
+  .right-block {
+    position: fixed;
+    margin-top: 100px;
+    margin-left: 600px;
+    height: 400px;
+    background-color: red;
+    width: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .left-block {
+    position: fixed;
+    background-color: red;
+    left: 3px;
+    bottom: 10px;
+    height: 300px;
+    width: 10px;
+  }
+  .middle-block {
+    position: fixed;
+    background-color: red;
+
+    bottom: 10px;
+    height: 10px;
+    width: 450px;
+  }
+  .right-block {
+    position: fixed;
+    background-color: red;
+    right: 3px;
+    bottom: 10px;
+    height: 300px;
+    width: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .left-block {
+    position: fixed;
+    background-color: red;
+    left: 3px;
+    bottom: 10px;
+    height: 300px;
+    width: 10px;
+  }
+  .middle-block {
+    position: fixed;
+    background-color: red;
+
+    bottom: 10px;
+    height: 10px;
+    width: 450px;
+  }
+  .right-block {
+    position: fixed;
+    background-color: red;
+    right: 3px;
+    bottom: 10px;
+    height: 300px;
+    width: 10px;
+  }
+}
