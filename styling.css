@@ -6,21 +6,23 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
+/* desktop browsers  sizes */
 @media (min-width: 1000px) {
   .left-block {
     position: fixed;
     margin-top: 100px;
     margin-left: -600px;
-    height: 450px;
+    height: 400px;
     background-color: red;
     width: 10px;
   }
   .middle-block {
     position: fixed;
-    margin-top: 500px;
+    margin-top: 100px;
 
     margin-left: 10px;
-    height: 50px;
+    height: 400px;
     width: 600px;
     background-color: red;
   }
@@ -32,7 +34,27 @@ body {
     background-color: red;
     width: 10px;
   }
+  .squareHollow {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: white;
+  }
+
+  #squareShape {
+    position: absolute;
+    cursor: move;
+    margin-top: 100px;
+    margin-left: -1000px;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+  }
 }
+
+/* mobile devices sizes */
 @media (max-width: 480px) {
   .left-block {
     position: fixed;
@@ -58,8 +80,14 @@ body {
     height: 300px;
     width: 10px;
   }
+  .square {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+  }
 }
-@media (max-width: 600px) {
+/* note,tablet sizes */
+@media (max-width: 999px) {
   .left-block {
     position: fixed;
     background-color: red;
@@ -73,8 +101,8 @@ body {
     background-color: red;
 
     bottom: 10px;
-    height: 10px;
-    width: 450px;
+    height: 300px;
+    width: 940px;
   }
   .right-block {
     position: fixed;
@@ -83,5 +111,10 @@ body {
     bottom: 10px;
     height: 300px;
     width: 10px;
+  }
+  .square {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
   }
 }
