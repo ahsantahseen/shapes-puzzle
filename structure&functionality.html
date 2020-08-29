@@ -11,20 +11,68 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
       $(function () {
-        $("#squareShape,#trapezoidShape").draggable();
+        var posSquare = { top: 50, left: 716 };
+        var posTrapo = { top: -20, left: 846.5 };
+        $("#squareShape").draggable({
+          stop: function (ev, ui) {
+            console.log($("#squareShape").position());
+            if (
+              $("#squareShape").position().top - posSquare.top <= 5 &&
+              $("#squareShape").position().left - posSquare.left <= 5
+            ) {
+              $("#squareShape").css({
+                top: posSquare.top,
+                left: posSquare.left,
+                position: "absolute",
+              });
+              $("#squareShape").css({
+                opacity: 0.7,
+              });
+            }
+          },
+        });
+        $("#trapezoidShape").draggable({
+          stop: function (ev, ui) {
+            console.log($("#trapezoidShape").position());
+            if (
+              $("#trapezoidShape").position().top - posTrapo.top <= 5 &&
+              $("#trapezoidShape").position().left - posTrapo.left <= 5
+            ) {
+              $("#trapezoidShape").css({
+                top: posTrapo.top,
+                left: posTrapo.left,
+                position: "absolute",
+              });
+              $("#trapezoidShape").css({
+                opacity: 0.7,
+              });
+            }
+          },
+        });
       });
     </script>
     <h1>Arrange the puzzle</h1>
-    <div class="left-block"></div>
+    <div class="container">
+      <div class="middle-block">
+        <div class="squareHollow"></div>
+        <div class="trapezoidHollow"></div>
 
-    <div class="middle-block">
-      <div class="squareHollow"></div>
-      <div class="trapezoidHollow"></div>
+        <div class="parallelogramHollow"></div>
+
+        <div class="circleHollow"></div>
+      </div>
+
+      <div id="squareShape" class="ui-widget-content" draggable="true"></div>
+
+      <div id="trapezoidShape" class="ui-widget-content" draggable="true"></div>
+
+      <div
+        id="parallelogramShape"
+        class="ui-widget-content"
+        draggable="true"
+      ></div>
+
+      <div id="circleShape" class="ui-widget-content" draggable="true"></div>
     </div>
-
-    <div class="right-block"></div>
-    <div id="squareShape" class="ui-widget-content" draggable="true"></div>
-
-    <div id="trapezoidShape" class="ui-widget-content" draggable="true"></div>
   </body>
 </html>
