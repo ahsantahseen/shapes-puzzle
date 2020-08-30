@@ -15,6 +15,8 @@
         var posTrapo = { top: -20, left: 846.5 };
 
         var posPara = { top: -100, left: 1052.2 };
+
+        var posCircle = { top: -220, left: 1184 };
         $("#squareShape").draggable({
           stop: function (ev, ui) {
             console.log($("#squareShape").position());
@@ -69,6 +71,24 @@
             }
           },
         });
+        $("#circleShape").draggable({
+          stop: function (ev, ui) {
+            console.log($("#circleShape").position());
+            if (
+              $("#circleShape").position().top - posCircle.top <= 5 &&
+              $("#circleShape").position().left - posCircle.left <= 5
+            ) {
+              $("#circleShape").css({
+                top: posCircle.top,
+                left: posCircle.left,
+                position: "absolute",
+              });
+              $("#circleShape").css({
+                opacity: 0.7,
+              });
+            }
+          },
+        });
       });
     </script>
     <h1>Arrange the puzzle</h1>
@@ -76,15 +96,15 @@
       <div class="middle-block">
         <div class="squareHollow"></div>
         <div class="trapezoidHollow"></div>
-
         <div class="parallelogramHollow"></div>
-
         <div class="circleHollow"></div>
       </div>
 
       <div id="squareShape" class="ui-widget-content" draggable="true"></div>
 
       <div id="trapezoidShape" class="ui-widget-content" draggable="true"></div>
+
+      <div id="triangleShape" class="ui-widget-content" draggable="true"></div>
 
       <div
         id="parallelogramShape"
